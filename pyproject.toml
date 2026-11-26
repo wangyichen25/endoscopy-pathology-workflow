@@ -1,0 +1,19 @@
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "endoscopy-pathology-workflow"
+version = "0.1.0"
+description = "Source-grounded visual labeling and image-to-specimen linkage for endoscopy research"
+requires-python = ">=3.10"
+dependencies = []
+
+[project.scripts]
+endoscopy-pathology = "endoscopy_pathology.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.setuptools.package-data]
+endoscopy_pathology = ["prompts/*.txt"]
